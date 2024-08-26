@@ -225,6 +225,7 @@ R_\theta(p) = \begin{pmatrix}
 $$
 
 and we keep the transformation:
+
 $$
 V' = R_\theta(p) V
 $$
@@ -285,7 +286,7 @@ $$
 
 **Question 14** - Use the function [torch.polar](https://pytorch.org/docs/stable/generated/torch.polar.html) to create the rotation matrix. It will effectively perform the *e<sup>i</sup>* operation on all the elements of the θ matrix.
 
-\[
+$$
 \text{rotation\_matrix} = \begin{pmatrix}
 e^{i\theta_{11}} & e^{i\theta_{12}} & \cdots & e^{i\theta_{1\text{dim}/2}} \\
 e^{i\theta_{21}} & e^{i\theta_{22}} & \cdots & e^{i\theta_{2\text{dim}/2}} \\
@@ -294,7 +295,7 @@ e^{i\theta_{p1}} & e^{i\theta_{p2}} & \cdots & e^{i\theta_{p\text{dim}/2}} \\
 \vdots & \vdots & \ddots & \vdots \\
 e^{i\theta_{c1}} & e^{i\theta_{c2}} & \cdots & e^{i\theta_{c\text{dim}/2}}
 \end{pmatrix}
-\]
+$$
 
 Each of the Attention layers needs to be modified to rotate the queries and keys.
 
