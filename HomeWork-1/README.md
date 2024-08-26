@@ -219,8 +219,8 @@ R_\theta(p) = \begin{pmatrix}
 0 & 0 & \cos(p\theta_2) & -\sin(p\theta_2) & \cdots & 0 \\
 0 & 0 & \sin(p\theta_2) & \cos(p\theta_2) & \cdots & 0 \\
 \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
-0 & 0 & 0 & 0 & \cdots & \cos(p\theta_{\text{head\_dim}/2}) & -\sin(p\theta_{\text{head\_dim}/2}) \\
-0 & 0 & 0 & 0 & \cdots & \sin(p\theta_{\text{head\_dim}/2}) & \cos(p\theta_{\text{head\_dim}/2})
+0 & 0 & 0 & 0 & \cdots & \cos(p\theta_{\text{head-dim}/2}) & -\sin(p\theta_{\text{head-dim}/2}) \\
+0 & 0 & 0 & 0 & \cdots & \sin(p\theta_{\text{head-dim}/2}) & \cos(p\theta_{\text{head-dim}/2})
 \end{pmatrix}
 $$
 
@@ -287,7 +287,7 @@ $$
 **Question 14** - Use the function [torch.polar](https://pytorch.org/docs/stable/generated/torch.polar.html) to create the rotation matrix. It will effectively perform the *e<sup>i</sup>* operation on all the elements of the θ matrix.
 
 $$
-\text{rotation\_matrix} = \begin{pmatrix}
+\text{rotation-matrix} = \begin{pmatrix}
 e^{i\theta_{11}} & e^{i\theta_{12}} & \cdots & e^{i\theta_{1\text{dim}/2}} \\
 e^{i\theta_{21}} & e^{i\theta_{22}} & \cdots & e^{i\theta_{2\text{dim}/2}} \\
 \vdots & \vdots & \ddots & \vdots \\
